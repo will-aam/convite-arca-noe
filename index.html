@@ -9,10 +9,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="venue-style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
-      <!-- Header com animação de nuvens -->
       <div class="sky-background">
         <div class="cloud cloud1"></div>
         <div class="cloud cloud2"></div>
@@ -20,7 +24,6 @@
         <div class="sun"></div>
       </div>
 
-      <!-- Convite Principal -->
       <div class="invitation-card">
         <div class="header-section">
           <h1 class="name-title">RAQUEL</h1>
@@ -29,30 +32,30 @@
             <span class="age-number">1</span>
             <span class="age-text">aninho</span>
           </div>
-          <div class="countdown-container">
-            <div class="countdown-item">
-              <span id="days">00</span>
-              <span class="countdown-label">Dias</span>
-            </div>
-            <div class="countdown-item">
-              <span id="hours">00</span>
-              <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-              <span id="minutes">00</span>
-              <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-              <span id="seconds">00</span>
-              <span class="countdown-label">Segundos</span>
-            </div>
-          </div>
           <p class="celebration-text">
             A ARCA ESTÁ EM FESTA! VAMOS JUNTOS COMEMORAR O MEU PRIMEIRO ANINHO!
           </p>
         </div>
 
-        <!-- Data e Hora -->
+        <div class="countdown-container">
+          <div class="countdown-item">
+            <span id="days">00</span>
+            <span class="countdown-label">Dias</span>
+          </div>
+          <div class="countdown-item">
+            <span id="hours">00</span>
+            <span class="countdown-label">Horas</span>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">00</span>
+            <span class="countdown-label">Minutos</span>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">00</span>
+            <span class="countdown-label">Segundos</span>
+          </div>
+        </div>
+
         <div class="date-time-section">
           <div class="date-container">
             <span class="month">SETEMBRO</span>
@@ -64,116 +67,35 @@
           </div>
         </div>
 
-        <!-- Foto da criança -->
-        <div class="child-photo">
-          <img src="/perfil.jpg" alt="Raquel" class="child-image" />
-        </div>
+        <!-- <div class="child-photo">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8qDVd1hwjl4eHkPHVgZbFsRmpQbxqr.png"
+            alt="Raquel"
+            class="child-image"
+          />
+        </div> -->
 
-        <!-- Arca de Noé -->
-        <div class="ark-section">
-          <div class="rainbow"></div>
-          <div class="ark-container">
-            <div class="ark">
-              <div class="ark-body"></div>
-              <div class="ark-roof"></div>
-              <div class="animals">
-                <span class="animal">🦁</span>
-                <span class="animal">🐘</span>
-                <span class="animal">🦒</span>
-                <span class="animal">🐻</span>
-                <span class="animal">🐰</span>
-              </div>
-            </div>
-          </div>
-          <div class="waves">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-          </div>
-        </div>
-
-        <!-- Botões de Ação -->
         <div class="action-buttons">
-          <a
-            href="https://wa.me/5579965586540?text=Olá%2C%20Raquel!%20Estou%20confirmando%20minha%20presença%20no%20seu%20aniversário.%20Mal%20posso%20esperar%20para%20comemorar%20com%20você!"
-            class="action-btn whatsapp-btn"
-            target="_blank"
-          >
-            <div class="btn-icon">📱</div>
-            <span>Confirmar Presença</span>
-          </a>
-
           <a
             href="https://www.google.com.br/maps/@-11.0010515,-37.3185863,3a,75y,324.18h,81.21t/data=!3m7!1e1!3m5!1srhpJ0jQ4LKgdNlXWj5X04A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D8.790568530183805%26panoid%3DrhpJ0jQ4LKgdNlXWj5X04A%26yaw%3D324.1829357703722!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDkxNS4wIKXMDSoASAFQAw%3D%3D"
             class="action-btn location-btn"
             target="_blank"
           >
-            <div class="btn-icon">📍</div>
+            <i class="bx bx-map-pin"></i>
             <span>Ver Localização</span>
           </a>
-
-          <button class="action-btn gifts-btn" onclick="toggleGifts()">
-            <div class="btn-icon">🎁</div>
-            <span>Sugestão de Presentes</span>
-          </button>
         </div>
 
-        <!-- Local do Evento -->
         <div class="venue-info">
           <h3>Espaço Garden</h3>
           <p>Eventos e comemorações</p>
           <address>
-            Rod. Arnaldo Garcez, 322 - Cohab<br />Itaporanga d'Ajuda - SE,
-            49120-000
+            Rod. Arnaldo Garcez, 322<br />Itaporanga d'Ajuda - SE
           </address>
         </div>
       </div>
 
-      <!-- Seção de Presentes (inicialmente oculta) -->
-      <div class="gifts-section" id="giftsSection">
-        <div class="gifts-card">
-          <h2>SUGESTÃO DE PRESENTE</h2>
-
-          <div class="gifts-grid">
-            <div class="gift-category">
-              <div class="gift-items">
-                <div class="gift-item">
-                  <div class="gift-icon">👗</div>
-                  <span>Roupinhas</span>
-                </div>
-                <div class="gift-item">
-                  <div class="gift-icon">👶</div>
-                  <span>Sapatinhos</span>
-                </div>
-              </div>
-              <div class="size-info">
-                <span class="age-range">1 À 2 ANOS</span>
-                <span class="sizes">Nº 19, 20, 21</span>
-              </div>
-            </div>
-
-            <div class="gift-category">
-              <div class="gift-items">
-                <div class="gift-item">
-                  <div class="gift-icon">🧸</div>
-                  <span>Brinquedos</span>
-                </div>
-                <div class="gift-item">
-                  <div class="gift-icon">📚</div>
-                  <span>Livrinhos</span>
-                </div>
-              </div>
-              <div class="size-info">
-                <span class="note">TODOS, COM EXCEÇÃO DE BONECAS</span>
-              </div>
-            </div>
-          </div>
-
-          <button class="close-gifts-btn" onclick="toggleGifts()">
-            Fechar
-          </button>
-        </div>
-      </div>
+      <div class="gifts-section" id="giftsSection"></div>
     </div>
 
     <script src="script.js"></script>

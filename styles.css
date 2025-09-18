@@ -345,385 +345,67 @@ body {
   }
 }
 
-/* Arca de Noé */
-.ark-section {
-  position: relative;
-  margin-bottom: 30px;
-  height: 200px;
-}
-
-.rainbow {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 100px;
-  height: 50px;
-  background: linear-gradient(
-    to right,
-    #ff0000 0%,
-    #ff8c00 16.66%,
-    #ffd700 33.33%,
-    #00ff00 50%,
-    #0000ff 66.66%,
-    #8b00ff 83.33%,
-    #ff1493 100%
-  );
-  border-radius: 100px 100px 0 0;
-  opacity: 0.8;
-  animation: fadeInOut 4s infinite;
-}
-
-@keyframes fadeInOut {
-  0%,
-  100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-.ark-container {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ark {
-  position: relative;
-  animation: rockBoat 3s ease-in-out infinite;
-}
-
-@keyframes rockBoat {
-  0%,
-  100% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(1deg);
-  }
-}
-
-.ark-body {
-  width: 120px;
-  height: 60px;
-  background: linear-gradient(135deg, #8b4513, #a0522d);
-  border-radius: 0 0 60px 60px;
-  position: relative;
-}
-
-.ark-roof {
-  width: 140px;
-  height: 40px;
-  background: linear-gradient(135deg, #654321, #8b4513);
-  border-radius: 20px 20px 0 0;
-  position: absolute;
-  top: -20px;
-  left: -10px;
-}
-
-.animals {
-  position: absolute;
-  top: -15px;
-  left: 10px;
-  display: flex;
-  gap: 5px;
-}
-
-.animal {
-  font-size: 1.2rem;
-  animation: animalBounce 2s infinite;
-}
-
-.animal:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.animal:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.animal:nth-child(4) {
-  animation-delay: 0.6s;
-}
-.animal:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-@keyframes animalBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-}
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(135deg, #4682b4, #87ceeb);
-  border-radius: 20px 20px 0 0;
-  animation: wave 2s ease-in-out infinite;
-}
-
-.wave2 {
-  animation-delay: 0.5s;
-  opacity: 0.7;
-  height: 15px;
-}
-
-.wave3 {
-  animation-delay: 1s;
-  opacity: 0.5;
-  height: 10px;
-}
-
-@keyframes wave {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-}
-
-/* Botões de Ação */
+/* Botões de Ação - Estilo 3D Divertido (Corrigido) */
 .action-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
 .action-btn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   padding: 15px 20px;
   border: none;
-  border-radius: 50px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
+  border-radius: 15px;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
   text-decoration: none;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-in-out; /* Transição no transform */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+  transform: translateY(4px); /* Usamos transform para o efeito de pressionar */
+}
+
+/* Estilo dos ícones */
+.action-btn i {
+  font-size: 1.8rem; /* Tamanho do ícone */
 }
 
 .whatsapp-btn {
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: #25d366;
+  box-shadow: 0 5px 0 #128c7e; /* Sombra que cria o efeito 3D */
 }
 
-.whatsapp-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+.whatsapp-btn:active {
+  box-shadow: 0 2px 0 #128c7e;
 }
 
 .location-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  background: #ff6b6b;
+  box-shadow: 0 5px 0 #c94a4a;
 }
 
-.location-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+.location-btn:active {
+  box-shadow: 0 2px 0 #c94a4a;
 }
 
 .gifts-btn {
-  background: linear-gradient(135deg, #ffd700, #ffa500);
+  background: #ffd700;
+  box-shadow: 0 5px 0 #e0b800;
   color: #333;
 }
 
-.gifts-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-}
-
-.btn-icon {
-  font-size: 1.5rem;
-}
-
-/* Informações do Local */
-.venue-info {
-  text-align: center;
-  background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
-  padding: 20px;
-  border-radius: 15px;
-  border: 2px solid #b8e6ff;
-}
-
-.venue-info h3 {
-  font-family: "Fredoka One", cursive;
-  color: #4682b4;
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-}
-
-.venue-info p {
-  color: #666;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.venue-info address {
-  color: #555;
-  font-style: normal;
-  line-height: 1.4;
-  font-size: 0.9rem;
-}
-
-/* Seção de Presentes */
-.gifts-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 20px;
-}
-
-.gifts-section.active {
-  display: flex;
-  animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.gifts-card {
-  background: linear-gradient(135deg, #87ceeb, #b8e6ff);
-  border-radius: 25px;
-  padding: 30px;
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
-  animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
-  from {
-    transform: scale(0.8) translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-.gifts-card h2 {
-  font-family: "Fredoka One", cursive;
-  color: #ff69b4;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
-}
-
-.gifts-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-bottom: 30px;
-}
-
-.gift-category {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.gift-items {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
-}
-
-.gift-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.gift-icon {
-  font-size: 2.5rem;
-  animation: bounce 2s infinite;
-}
-
-.gift-item span {
-  font-weight: 600;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-.size-info {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.age-range {
-  font-weight: 700;
-  color: #ff69b4;
-  font-size: 1.1rem;
-}
-
-.sizes {
-  font-weight: 600;
-  color: #9370db;
-  font-size: 1rem;
-}
-
-.note {
-  font-weight: 600;
-  color: #ff6b6b;
-  font-size: 0.9rem;
-  line-height: 1.3;
-}
-
-.close-gifts-btn {
-  background: linear-gradient(135deg, #ff6b6b, #ff5252);
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
-}
-
-.close-gifts-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+.gifts-btn:active {
+  box-shadow: 0 2px 0 #e0b800;
 }
 
 /* Responsividade */
@@ -893,4 +575,142 @@ body {
   text-align: center;
   width: 100%;
   animation: pulse 2s infinite;
+}
+/* Seção de Presentes */
+.gifts-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.gifts-section.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gifts-card {
+  background: linear-gradient(135deg, #87ceeb, #b8e6ff);
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.gifts-card h2 {
+  font-family: "Fredoka One", cursive;
+  color: #ff69b4;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.gifts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.gift-category {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gift-items {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.gift-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gift-icon {
+  font-size: 2.5rem;
+  animation: bounce 2s infinite;
+}
+
+.gift-item span {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.size-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.age-range {
+  font-weight: 700;
+  color: #ff69b4;
+  font-size: 1.1rem;
+}
+
+.sizes {
+  font-weight: 600;
+  color: #9370db;
+  font-size: 1rem;
+}
+
+.note {
+  font-weight: 600;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.close-gifts-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.close-gifts-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }

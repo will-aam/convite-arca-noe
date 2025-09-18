@@ -1,0 +1,56 @@
+/* Estilo "Placa Decorativa" para Informações do Local */
+
+.venue-info {
+  background: #fdf5e6; /* Cor de pergaminho/madeira clara */
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 15px; /* Adiciona margens laterais */
+  text-align: center;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #d2b48c; /* Borda cor de madeira */
+  position: relative;
+  overflow: hidden; /* Garante que os "parafusos" fiquem dentro da borda */
+}
+
+/* Simula "parafusos" decorativos nos cantos */
+.venue-info::before,
+.venue-info::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #a0522d;
+  border-radius: 50%;
+}
+
+.venue-info::before {
+  top: 10px;
+  left: 10px;
+}
+
+.venue-info::after {
+  bottom: 10px;
+  right: 10px;
+}
+
+.venue-info h3 {
+  font-family: "Fredoka One", cursive;
+  color: #8b4513; /* Marrom escuro */
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.venue-info p {
+  color: #a0522d; /* Marrom médio */
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.venue-info address {
+  color: #6b4f3a;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
